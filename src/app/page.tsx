@@ -1,8 +1,9 @@
-
+"use client";
+import Navbar from "@/app/Components/Navbar";
 export default function Home() {
   return (
     <div>
-      <h1>Hello its office pc</h1>
+      <Navbar/>
     </div>
   );
 }
