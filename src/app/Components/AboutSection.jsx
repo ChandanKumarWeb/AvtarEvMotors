@@ -159,7 +159,7 @@ export default function AboutSection() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-white dark:bg-black">
+    <section className="py-16 md:py-24 bg-white dark:bg-black" id="about">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div

@@ -160,7 +160,7 @@ export default function ServicesSection() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-white dark:bg-black">
+    <section className="py-16 md:py-24 bg-white dark:bg-black" id="services">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
