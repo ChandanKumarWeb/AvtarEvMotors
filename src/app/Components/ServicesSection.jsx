@@ -187,6 +187,7 @@ export default function ServicesSection() {
             models. Our expert technicians ensure your vehicle runs efficiently and safely.
           </motion.p>
         </motion.div>
+      
 
         {/* Quick Services */}
         <motion.div
@@ -212,6 +213,7 @@ export default function ServicesSection() {
             </motion.div>
           ))}
         </motion.div>
+        
 
         {/* Main Services Grid */}
         <motion.div
