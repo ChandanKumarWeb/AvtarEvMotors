@@ -1,11 +1,11 @@
 "use client";
 
-import Navbar from "@/app/Components/Navbar";
-import HeroSection from "@/app/Components/HeroSection";
-import ServicesSection from "@/app/Components/ServicesSection";
-import AboutSection from "@/app/Components/AboutSection";
-import ContactPage from "@/app/Components/ContactPage";
-import Footer from "@/app/Components/Footer";
+import Navbar from "@/Components/Navbar";
+import HeroSection from "@/Components/HeroSection";
+import ServicesSection from "@/Components/ServicesSection";
+import AboutSection from "@/Components/AboutSection";
+import ContactPage from "@/Components/ContactPage";
+import Footer from "@/Components/Footer";
 
 export default function Home() {
   return (
