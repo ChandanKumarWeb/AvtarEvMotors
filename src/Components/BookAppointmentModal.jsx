@@ -1,23 +1,32 @@
-"use client"
+"use client";
 
-
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Calendar } from "@/components/ui/calendar"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { CalendarIcon, Clock, X } from "lucide-react"
-import { format } from "date-fns"
-import { cn } from "@/lib/utils"
-import { motion, AnimatePresence } from "framer-motion"
-
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { CalendarIcon, Clock, X } from "lucide-react";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function BookAppointmentModal({ children }) {
-  const [open, setOpen] = useState(false)
-  const [date, setDate] = useState()
+  const [open, setOpen] = useState(false);
+  const [date, setDate] = useState();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -27,7 +36,7 @@ export default function BookAppointmentModal({ children }) {
     serviceType: "",
     timeSlot: "",
     description: "",
-  })
+  });
 
   const serviceTypes = [
     "General Service & Maintenance",
@@ -40,7 +49,7 @@ export default function BookAppointmentModal({ children }) {
     "Body Work & Paint",
     "Insurance Claim",
     "Emergency Repair",
-  ]
+  ];
 
   const timeSlots = [
     "09:00 AM - 10:00 AM",
@@ -51,25 +60,33 @@ export default function BookAppointmentModal({ children }) {
     "03:00 PM - 04:00 PM",
     "04:00 PM - 05:00 PM",
     "05:00 PM - 06:00 PM",
-  ]
+  ];
 
-  const vehicleTypes = ["E-Rickshaw (Passenger)", "E-Rickshaw (Goods)", "E-Cart", "E-Loader", "Other Electric Vehicle"]
+  const vehicleTypes = [
+    "E-Rickshaw (Passenger)",
+    "E-Rickshaw (Goods)",
+    "E-Cart",
+    "E-Loader",
+    "Other Electric Vehicle",
+  ];
 
   const handleInputChange = (field, value) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     // Here you would typically send the data to your backend
     console.log("Appointment Data:", {
       ...formData,
       appointmentDate: date,
-    })
+    });
 
     // Show success message (you can replace this with a toast notification)
-    alert("Appointment booked successfully! We'll contact you soon to confirm.")
+    alert(
+      "Appointment booked successfully! We'll contact you soon to confirm."
+    );
 
     // Reset form and close modal
     setFormData({
@@ -81,10 +98,10 @@ export default function BookAppointmentModal({ children }) {
       serviceType: "",
       timeSlot: "",
       description: "",
-    })
-    setDate(undefined)
-    setOpen(false)
-  }
+    });
+    setDate(undefined);
+    setOpen(false);
+  };
 
   return (
     <>
@@ -141,8 +158,9 @@ export default function BookAppointmentModal({ children }) {
                       Book Service Appointment
                     </h2>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                      Schedule your e-rickshaw service appointment with Avtar EV Motors. Fill in the details below and
-                      we'll confirm your booking.
+                      Schedule your e-rickshaw service appointment with Avtar EV
+                      Motors. Fill in the details below and we'll confirm your
+                      booking.
                     </p>
                   </div>
 
@@ -160,7 +178,9 @@ export default function BookAppointmentModal({ children }) {
                           id="name"
                           placeholder="Enter your full name"
                           value={formData.name}
-                          onChange={(e) => handleInputChange("name", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange("name", e.target.value)
+                          }
                           required
                         />
                       </div>
@@ -171,7 +191,9 @@ export default function BookAppointmentModal({ children }) {
                           type="tel"
                           placeholder="+91 96369 04811"
                           value={formData.phone}
-                          onChange={(e) => handleInputChange("phone", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange("phone", e.target.value)
+                          }
                           required
                         />
                       </div>
@@ -189,7 +211,9 @@ export default function BookAppointmentModal({ children }) {
                         type="email"
                         placeholder="your.email@example.com"
                         value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("email", e.target.value)
+                        }
                       />
                     </motion.div>
 
@@ -204,7 +228,9 @@ export default function BookAppointmentModal({ children }) {
                         <Label htmlFor="vehicleType">Vehicle Type *</Label>
                         <Select
                           value={formData.vehicleType}
-                          onValueChange={(value) => handleInputChange("vehicleType", value)}
+                          onValueChange={(value) =>
+                            handleInputChange("vehicleType", value)
+                          }
                         >
                           <SelectTrigger>
                             <SelectValue placeholder="Select vehicle type" />
@@ -224,7 +250,9 @@ export default function BookAppointmentModal({ children }) {
                           id="vehicleNumber"
                           placeholder="e.g., DL 1A 1234"
                           value={formData.vehicleNumber}
-                          onChange={(e) => handleInputChange("vehicleNumber", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange("vehicleNumber", e.target.value)
+                          }
                         />
                       </div>
                     </motion.div>
@@ -239,7 +267,9 @@ export default function BookAppointmentModal({ children }) {
                       <Label htmlFor="serviceType">Service Type *</Label>
                       <Select
                         value={formData.serviceType}
-                        onValueChange={(value) => handleInputChange("serviceType", value)}
+                        onValueChange={(value) =>
+                          handleInputChange("serviceType", value)
+                        }
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select service type" />
@@ -263,35 +293,25 @@ export default function BookAppointmentModal({ children }) {
                     >
                       <div className="space-y-2">
                         <Label>Preferred Date *</Label>
-                        <Popover>
-                          <PopoverTrigger asChild>
-                            <Button
-                              variant="outline"
-                              className={cn(
-                                "w-full justify-start text-left font-normal",
-                                !date && "text-muted-foreground",
-                              )}
-                            >
-                              <CalendarIcon className="mr-2 h-4 w-4" />
-                              {date ? format(date, "PPP") : "Pick a date"}
-                            </Button>
-                          </PopoverTrigger>
-                          <PopoverContent className="w-auto p-0">
-                            <Calendar
-                              mode="single"
-                              selected={date}
-                              onSelect={setDate}
-                              disabled={(date) => date < new Date() || date < new Date("1900-01-01")}
-                              initialFocus
-                            />
-                          </PopoverContent>
-                        </Popover>
+                        <div className="w-full">
+                          <DatePicker
+                            selected={date}
+                            onChange={setDate}
+                            minDate={new Date()}
+                            placeholderText="Pick a date"
+                            className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600 dark:bg-gray-800 dark:text-white"
+                            dateFormat="PPP"
+                            required
+                          />
+                        </div>
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="timeSlot">Preferred Time *</Label>
                         <Select
                           value={formData.timeSlot}
-                          onValueChange={(value) => handleInputChange("timeSlot", value)}
+                          onValueChange={(value) =>
+                            handleInputChange("timeSlot", value)
+                          }
                         >
                           <SelectTrigger>
                             <SelectValue placeholder="Select time slot" />
@@ -319,7 +339,9 @@ export default function BookAppointmentModal({ children }) {
                         id="description"
                         placeholder="Describe the issue or any specific requirements..."
                         value={formData.description}
-                        onChange={(e) => handleInputChange("description", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("description", e.target.value)
+                        }
                         rows={3}
                       />
                     </motion.div>
@@ -331,7 +353,12 @@ export default function BookAppointmentModal({ children }) {
                       transition={{ delay: 0.5, duration: 0.3 }}
                       className="flex gap-3 pt-4"
                     >
-                      <Button type="button" variant="outline" onClick={() => setOpen(false)} className="flex-1">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => setOpen(false)}
+                        className="flex-1"
+                      >
                         Cancel
                       </Button>
                       <Button
@@ -357,5 +384,5 @@ export default function BookAppointmentModal({ children }) {
         )}
       </AnimatePresence>
     </>
-  )
+  );
 }
