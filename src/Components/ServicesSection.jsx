@@ -299,7 +299,7 @@ export default function ServicesSection() {
           className="text-center bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 md:p-12"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Need a Custom Service Package?
+            Need a Custom Service Packages?
           </h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
             Contact our experts for personalized service packages tailored to your e-rickshaw's specific needs. We offer
