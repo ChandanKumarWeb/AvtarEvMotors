@@ -169,7 +169,7 @@ export default function BookAppointmentModal({ children }) {
                         <Input
                           id="phone"
                           type="tel"
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 96369 04811"
                           value={formData.phone}
                           onChange={(e) => handleInputChange("phone", e.target.value)}
                           required

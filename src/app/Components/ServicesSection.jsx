@@ -310,7 +310,7 @@ export default function ServicesSection() {
               Get Custom Quote
             </Button>
             <Button size="lg" variant="outline">
-              Call: +91 98765 43210
+              Call: +91 96369 04811
             </Button>
           </div>
         </motion.div>

@@ -312,7 +312,7 @@ export default function AboutSection() {
         </motion.div>
 
         {/* Team Section */}
-        <motion.div variants={containerVariants} initial="hidden" animate={controls} className="mb-20">
+        {/* <motion.div variants={containerVariants} initial="hidden" animate={controls} className="mb-20">
           <motion.h2
             variants={itemVariants}
             className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-12"
@@ -340,7 +340,7 @@ export default function AboutSection() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Timeline */}
         {/* <motion.div variants={containerVariants} initial="hidden" animate={controls} className="mb-20">
@@ -395,7 +395,7 @@ export default function AboutSection() {
           <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div>
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Address</h4>
-              <p className="text-gray-600 dark:text-gray-300">123 Service Road, Industrial Area, New Delhi - 110001</p>
+              <p className="text-gray-600 dark:text-gray-300">Avtar EVMotors, Plot No. 566, Swarna Vihar JDA Scheme, Muhana Mandi, Jaipur</p>
             </div>
             <div>
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Working Hours</h4>
@@ -408,9 +408,9 @@ export default function AboutSection() {
             <div>
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Contact</h4>
               <p className="text-gray-600 dark:text-gray-300">
-                Phone: +91 98765 43210
+                Phone: +91 96369 04811
                 <br />
-                Email: info@avtarevmotors.com
+                Email: avtarevmotors@gmail.com
               </p>
             </div>
           </motion.div>

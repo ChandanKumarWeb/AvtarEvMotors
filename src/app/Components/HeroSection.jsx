@@ -133,9 +133,9 @@ export default function HeroSection() {
                 </Button>
               </BookAppointmentModal>
 
-              <Button size="lg" variant="outline">
+              <a href="#services"><Button size="lg" variant="outline">
                 View Services
-              </Button>
+              </Button></a>
             </motion.div>
 
             {/* Features */}

@@ -95,8 +95,8 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-              <Zap className="h-6 w-6 text-white" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-transparent">
+              <img src="/Images/logo.webp" alt="logo" />            
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold text-gray-900 dark:text-white">Avtar EV</span>
@@ -125,7 +125,7 @@ export default function Navbar() {
               className="flex items-center space-x-2 text-sm text-gray-600 hover:text-green-600 dark:text-gray-300 dark:hover:text-green-400"
             >
               <Phone className="h-4 w-4" />
-              <span>+91 98765 43210</span>
+              <span>+91 96369 04811</span>
             </Link>
             <BookAppointmentModal>
               <Button className="bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800">
@@ -178,7 +178,7 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                   >
                     <Phone className="h-4 w-4" />
-                    <span>+91 98765 43210</span>
+                    <span>+91 96369 04811</span>
                   </Link>
                   <BookAppointmentModal>
                     <Button

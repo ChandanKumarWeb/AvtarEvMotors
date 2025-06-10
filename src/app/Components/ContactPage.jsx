@@ -58,7 +58,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-lg mb-1">Service Center Location</h3>
-                  <p className="text-gray-600 dark:text-gray-300">123 E-Rickshaw Lane, Green City, GC 12345</p>
+                  <p className="text-gray-600 dark:text-gray-300">Avtar EVMotors, Plot No. 566, Swarna Vihar JDA Scheme, Muhana Mandi, Jaipur</p>
                 </div>
               </div>
 
@@ -70,8 +70,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-lg mb-1">Phone Numbers</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Main: +91 98765 43210</p>
-                  <p className="text-gray-600 dark:text-gray-300">Support: +91 98765 43211</p>
+                  <p className="text-gray-600 dark:text-gray-300">Main: +91 96369 04811</p>
+                  {/* <p className="text-gray-600 dark:text-gray-300">Support: +91 98765 43211</p> */}
                 </div>
               </div>
 
@@ -83,8 +83,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-lg mb-1">Email Address</h3>
-                  <p className="text-gray-600 dark:text-gray-300">service@erickshawcenter.com</p>
-                  <p className="text-gray-600 dark:text-gray-300">support@erickshawcenter.com</p>
+                  <p className="text-gray-600 dark:text-gray-300">avtarevmotors@gmail.com</p>
+                  {/* <p className="text-gray-600 dark:text-gray-300">support@erickshawcenter.com</p> */}
                 </div>
               </div>
 
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   type="tel"
                   {...register('phone')}
                   className={`w-full px-4 py-2 rounded-lg border ${errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500'} focus:outline-none focus:ring-2 bg-white dark:bg-gray-700`}
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 96369 04811"
                 />
                 {errors.phone && (
                   <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>
