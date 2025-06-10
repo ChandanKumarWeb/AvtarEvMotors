@@ -35,11 +35,11 @@ export default function ContactPage() {
 
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div id='contacts' className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
       <div className="container mx-auto px-4 py-12">
         {/* Header with theme toggle */}
         <header className="flex justify-between items-center mb-12">
-          <h1 className="text-3xl font-bold">E-Rickshaw Service Center</h1>
+          <h1 className="text-3xl font-bold">Contact Avtar EV Motors</h1>
         </header>
 
         {/* Contact section */}
